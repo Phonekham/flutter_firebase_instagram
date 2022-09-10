@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>987248681757-dpo43t9ja56b9k4th3iqrblkoako2j5j.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.987248681757-dpo43t9ja56b9k4th3iqrblkoako2j5j</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAUiKkFCkR7xwykO2kyKI31Fmnr--UhjPM</string>
+	<key>GCM_SENDER_ID</key>
+	<string>987248681757</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.flutterFirebaseInstagram</string>
+	<key>PROJECT_ID</key>
+	<string>flutter-instagram-625e2</string>
+	<key>STORAGE_BUCKET</key>
+	<string>flutter-instagram-625e2.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:987248681757:ios:35ed33a4182f1d219ab7f4</string>
+	<key>DATABASE_URL</key>
+	<string>https://flutter-instagram-625e2-default-rtdb.asia-southeast1.firebasedatabase.app</string>
+</dict>
+</plist>
