@@ -39,7 +39,7 @@ class _MobileScreenLayoutState extends State<MobileScreenLayout> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        child: Text('mobile layout'),
+        child: Center(child: Text('mobile layout')),
       ),
       // body: PageView(
       //   children: homeScreenItems,
