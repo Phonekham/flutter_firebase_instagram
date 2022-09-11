@@ -55,6 +55,10 @@ class MyApp extends StatelessWidget {
                     mobileScreenLayout: MobileScreenLayout(),
                     webScreenLayout: WebScreenLayout(),
                   );
+                } else if (snapshot.hasError) {
+                  return Center(
+                    child: Text('${snapshot.error}'),
+                  );
                 }
               }
               // means connection to future hasnt been made yet
