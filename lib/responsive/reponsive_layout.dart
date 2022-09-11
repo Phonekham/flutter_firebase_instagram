@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import 'package:flutter_firebase_instagram/providers/user_provider.dart';
 import 'package:flutter_firebase_instagram/utils/dimensions.dart';
 
 class ResponsiveLayout extends StatefulWidget {
@@ -18,14 +21,14 @@ class _ResponsiveLayoutState extends State<ResponsiveLayout> {
   @override
   void initState() {
     super.initState();
-    // addData();
+    addData();
   }
 
-  // addData() async {
-  //   UserProvider _userProvider =
-  //       Provider.of<UserProvider>(context, listen: false);
-  //   await _userProvider.refreshUser();
-  // }
+  addData() async {
+    UserProvider _userProvider =
+        Provider.of<UserProvider>(context, listen: false);
+    await _userProvider.refreshUser();
+  }
 
   @override
   Widget build(BuildContext context) {
