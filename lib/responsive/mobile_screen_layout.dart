@@ -2,6 +2,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_firebase_instagram/utils/colors.dart';
+import 'package:flutter_firebase_instagram/utils/global_variable.dart';
 
 class MobileScreenLayout extends StatefulWidget {
   const MobileScreenLayout({Key? key}) : super(key: key);
@@ -40,59 +42,56 @@ class _MobileScreenLayoutState extends State<MobileScreenLayout> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        child: Center(child: Text('mobile layout')),
+      body: PageView(
+        controller: pageController,
+        onPageChanged: onPageChanged,
+        children: homeScreenItems,
       ),
-      // body: PageView(
-      //   children: homeScreenItems,
-      //   controller: pageController,
-      //   onPageChanged: onPageChanged,
-      // ),
-      // bottomNavigationBar: CupertinoTabBar(
-      //   backgroundColor: mobileBackgroundColor,
-      //   items: <BottomNavigationBarItem>[
-      //     BottomNavigationBarItem(
-      //       icon: Icon(
-      //         Icons.home,
-      //         color: (_page == 0) ? primaryColor : secondaryColor,
-      //       ),
-      //       label: '',
-      //       backgroundColor: primaryColor,
-      //     ),
-      //     BottomNavigationBarItem(
-      //         icon: Icon(
-      //           Icons.search,
-      //           color: (_page == 1) ? primaryColor : secondaryColor,
-      //         ),
-      //         label: '',
-      //         backgroundColor: primaryColor),
-      //     BottomNavigationBarItem(
-      //         icon: Icon(
-      //           Icons.add_circle,
-      //           color: (_page == 2) ? primaryColor : secondaryColor,
-      //         ),
-      //         label: '',
-      //         backgroundColor: primaryColor),
-      //     BottomNavigationBarItem(
-      //       icon: Icon(
-      //         Icons.favorite,
-      //         color: (_page == 3) ? primaryColor : secondaryColor,
-      //       ),
-      //       label: '',
-      //       backgroundColor: primaryColor,
-      //     ),
-      //     BottomNavigationBarItem(
-      //       icon: Icon(
-      //         Icons.person,
-      //         color: (_page == 4) ? primaryColor : secondaryColor,
-      //       ),
-      //       label: '',
-      //       backgroundColor: primaryColor,
-      //     ),
-      //   ],
-      //   onTap: navigationTapped,
-      //   currentIndex: _page,
-      // ),
+      bottomNavigationBar: CupertinoTabBar(
+        backgroundColor: mobileBackgroundColor,
+        items: <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.home,
+              color: (_page == 0) ? primaryColor : secondaryColor,
+            ),
+            label: '',
+            backgroundColor: primaryColor,
+          ),
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.search,
+                color: (_page == 1) ? primaryColor : secondaryColor,
+              ),
+              label: '',
+              backgroundColor: primaryColor),
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.add_circle,
+                color: (_page == 2) ? primaryColor : secondaryColor,
+              ),
+              label: '',
+              backgroundColor: primaryColor),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.favorite,
+              color: (_page == 3) ? primaryColor : secondaryColor,
+            ),
+            label: '',
+            backgroundColor: primaryColor,
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.person,
+              color: (_page == 4) ? primaryColor : secondaryColor,
+            ),
+            label: '',
+            backgroundColor: primaryColor,
+          ),
+        ],
+        onTap: navigationTapped,
+        currentIndex: _page,
+      ),
     );
   }
 }
